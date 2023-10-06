@@ -5,6 +5,12 @@ import Button from './components/Button/Button';
 
 // const App = () => {
 function App() {
+
+  const log = (functChild) => { // ho passato la callback dal figlio al padre e la eseguo
+    console.log('HAI CLICCATO, SONO SUL PARENT');
+    functChild();
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +25,8 @@ function App() {
           <Logo />  
         </Link>
 
-        <Button >
+        { /* LA FUNCTION LOG SCRITTA QUI SOPRA AL PADRE, VIENE PASSATA COME PROPS AL FIGLIO CON IL NOME FUNCT*/ }
+        <Button funct={log}> 
           CLICCAMI
         </ Button>
 
