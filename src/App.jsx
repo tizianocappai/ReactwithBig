@@ -6,9 +6,8 @@ import Button from './components/Button/Button';
 // const App = () => {
 function App() {
 
-  const log = (functChild) => { // ho passato la callback dal figlio al padre e la eseguo
-    console.log('HAI CLICCATO, SONO SUL PARENT');
-    functChild();
+  const log = (logChild) => { // ho passato la callback dal figlio al padre e la eseguo
+    console.log('HAI CLICCATO, SONO SUL PARENT ' + logChild);
 }
 
   return (
