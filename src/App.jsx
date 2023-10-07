@@ -1,8 +1,7 @@
 import './App.css';
-import Logo from './components/Logo/Logo';
-import Link from './components/Link/Link';
 import Button from './components/Button/Button';
 import Contatore from './components/Contatore/Contatore';
+import Product from './components/Product/Product';
 import { useState } from 'react';
 
 // const App = () => {
@@ -30,6 +29,9 @@ const changeContatore = () => {
         {isVisibleContatore ? <Contatore /> : null}
         
         <button onClick={changeContatore}>CONTATORE</button>
+
+        <Product Title={"Product 1"} Price={10} Description={"First product"} />
+            <Product Title={"Product 2"} Price={20} Description={"Second product"} />
 
       </header>
     </div>
