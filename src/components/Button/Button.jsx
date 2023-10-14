@@ -4,6 +4,10 @@ const Button = (props) => {
 
 	let log = 'prova stampa ';
 
+	const stampa = () => {
+		funct(log);
+	};
+
 	return (
 		<button onClick={stampa}>{children}</button> // eseguo la funzione passata come param dal padre
 	);
