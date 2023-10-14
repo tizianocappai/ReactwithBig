@@ -3,6 +3,7 @@ import Button from './components/Button/Button';
 import Contatore from './components/Contatore/Contatore';
 import Product from './components/Product/Product';
 import Post from './components/Post/Post';
+import MOCK_POSTS from './data/posts.mock'
 
 import { useState } from 'react';
 
@@ -11,6 +12,8 @@ function App() {
 	const log = (logChild) => {
 		console.log('HAI CLICCATO, SONO SUL PARENT ' + logChild);
 	};
+
+  const dataPosts = MOCK_POSTS;
 
 	const [isVisibleContatore, setIsVisibleContatore] = useState(true);
 
@@ -55,9 +58,23 @@ function App() {
 					<p>{result}</p>
 				</form>
 			</header>
+
 			<section>
-				<Post userId={'54'} title={'54rtyrtrt'} body={'54rtytrrtyyr'} />
+        <ul className='post-list'>
+          {
+            dataPosts.map((post, index) => 
+            {
+              return (
+                <li key={index}><Post id={post.id} title={post.title} body={post.body} /></li>
+              ) 
+            })
+          }
+        </ul>
+        
+
+				
 			</section>
+
 		</div>
 	);
 }

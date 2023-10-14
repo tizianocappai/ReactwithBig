@@ -1,4 +1,4 @@
-export default MOCK_POSTS = [
+const MOCK_POSTS = [
     {
       "userId": 1,
       "id": 1,
@@ -599,4 +599,6 @@ export default MOCK_POSTS = [
       "title": "at nam consequatur ea labore ea harum",
       "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
     }
-  ]
+  ];
+
+  export default MOCK_POSTS;
