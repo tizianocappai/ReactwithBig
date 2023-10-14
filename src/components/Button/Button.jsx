@@ -8,9 +8,8 @@ const Button = (props) => {
 		funct(log);
 	};
 
-	return (
-		<button onClick={stampa}>{children}</button> // eseguo la funzione passata come param dal padre
-	);
+	return <button onClick={stampa}>{children}</button> // eseguo la funzione passata come param dal padre
+		
 };
 
 export default Button;

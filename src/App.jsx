@@ -37,14 +37,14 @@ function App() {
 				<button onClick={changeContatore}>CONTATORE</button>
 
 				<Product
-					Title={'Product 1'}
-					Price={10}
-					Description={'First product'}
+					title={'Product 1'}
+					price={10}
+					description={'First product'}
 				/>
 				<Product
-					Title={'Product 2'}
-					Price={20}
-					Description={'Second product'}
+					title={'Product 2'}
+					price={20}
+					description={'Second product'}
 				/>
 
 				<form>
@@ -52,6 +52,7 @@ function App() {
 					<input type='text' onChange={checkInput} />
 					<p>{result}</p>
 				</form>
+        
 			</header>
 		</div>
 	);
