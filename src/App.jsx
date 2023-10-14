@@ -54,10 +54,10 @@ function App() {
 					<input type='text' onChange={checkInput} />
 					<p>{result}</p>
 				</form>
-
-        <Post userId={'54'} title={'54'} body={'54'}/>
-
 			</header>
+			<section>
+				<Post userId={'54'} title={'54rtyrtrt'} body={'54rtytrrtyyr'} />
+			</section>
 		</div>
 	);
 }
