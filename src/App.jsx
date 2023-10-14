@@ -2,6 +2,8 @@ import './App.css';
 import Button from './components/Button/Button';
 import Contatore from './components/Contatore/Contatore';
 import Product from './components/Product/Product';
+import Post from './components/Post/Post';
+
 import { useState } from 'react';
 
 // const App = () => {
@@ -52,7 +54,9 @@ function App() {
 					<input type='text' onChange={checkInput} />
 					<p>{result}</p>
 				</form>
-        
+
+        <Post userId={'54'} title={'54'} body={'54'}/>
+
 			</header>
 		</div>
 	);
