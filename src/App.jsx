@@ -17,6 +17,16 @@ const changeContatore = () => {
   setIsVisibleContatore(prevState => !prevState)
 }
 
+const [result, setResult] = useState('Invalid message');
+    
+const checkInput = (event) => {
+    if (event.target.value.trim().length < 3) {
+        setResult('Invalid message');
+    } else {
+        setResult('Valid message');
+    }
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -31,7 +41,13 @@ const changeContatore = () => {
         <button onClick={changeContatore}>CONTATORE</button>
 
         <Product Title={"Product 1"} Price={10} Description={"First product"} />
-            <Product Title={"Product 2"} Price={20} Description={"Second product"} />
+        <Product Title={"Product 2"} Price={20} Description={"Second product"} />
+
+        <form>
+            <label>Your message</label>
+            <input type="text" onChange={checkInput} />
+            <p>{result}</p> 
+        </form>
 
       </header>
     </div>
