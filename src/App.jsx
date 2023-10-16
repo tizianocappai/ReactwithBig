@@ -2,6 +2,7 @@ import './App.css';
 import Button from './components/Button/Button';
 import Contatore from './components/Contatore/Contatore';
 import Product from './components/Product/Product';
+import Loader from './components/Loader/Loader';
 import Post from './components/Post/Post';
 import MOCK_POSTS from './data/posts.mock'
 
@@ -70,10 +71,10 @@ function App() {
             })
           }
         </ul>
-        
-
 				
 			</section>
+
+			<Loader />
 
 		</div>
 	);
