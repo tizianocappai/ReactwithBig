@@ -3,6 +3,9 @@ import './App.css';
 import Loader from './components/Loader/Loader';
 import Post from './components/Post/Post';
 import MOCK_POSTS from './data/posts.mock';
+import Orologio from './components/Orologio/Orologio';
+import Contatore from './components/Contatore/Contatore';
+
 
 function App() {
 
@@ -16,7 +19,6 @@ function App() {
 		  	setDataPosts(data);
 		} catch (error) {
 			console.log(error);
-
 		}
 	}
 
@@ -28,6 +30,15 @@ function App() {
 
 	return (
 		<div className='App'>
+
+			{/* LA FUNCTION SCRITTA E' UN ALTERNATIVA ALL'IF SRITTO SOPRA*/}
+			{/* !dataPosts ? <Loader /> : <Contatore /> */} 
+
+
+			{/* mostrare orologio a schermo con span, vedere setTimeout e setInterval */}
+			{/* TODO: come cambiare propriea del body ? (flex ecc) */}
+			<Orologio />
+
 			<section>
 				<ul className='post-list'>
 					{dataPosts.map((post, index) => {
