@@ -1,0 +1,20 @@
+.articles-list {
+	list-style: none;
+	padding: 0 16px;
+}
+
+.articles-list__item {
+	padding: 8px 0;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid gray;
+	flex-direction: row;
+}
+
+.articles-list__item-title {
+}
+
+.articles-list__item-number {
+	font-size: 20px;
+	margin-right: 16px;
+}
