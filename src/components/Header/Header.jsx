@@ -11,7 +11,7 @@ const Header = (props) => {
 
 	return (
 		<header className='header'>
-			<div className='header__logo'>Big with React</div>
+			<div className='header__logo'>React with Big</div>
 			<div className='header__menu' onClick={handleClickMenu}>
 				<img src={menu} alt='menu icon' />
 			</div>
