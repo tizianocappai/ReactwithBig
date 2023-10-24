@@ -6,10 +6,12 @@ const Articles = () => {
 	const [articles, setArticles] = useState(null);
 
 	useEffect(() => {
-		fetch('https://jsonplaceholder.typicode.com/posts')
+		fetch('https://dummyjson.com/posts')
 			.then((response) => response.json())
 			.then((data) => {
-				setArticles(data);
+				console.log('data', data);
+				const { posts } = data;
+				setArticles(posts);
 			});
 	}, []);
 
