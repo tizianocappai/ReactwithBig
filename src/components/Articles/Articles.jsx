@@ -44,15 +44,14 @@ const Articles = () => {
 				))}
 			</ul>
 
-			{showModal && createPortal(
-				<Modal articleBody={articleBody} onClose={() => setShowModal(false)} />,
-				/*document.getRootNode('/.app-container')*/
-				document.body)
-			}
-
-			{/* CREARE COMPONENTE X FARE UNA MODALE CHE SI APRE AL CLICK SUL SINGOLO ARTICOLO E VIENE AGGANCIATA AD UN NODO DIVERSO RISPETO A QUELLO DOVE SI TROVA(BODY IDROOT)*/}
-			
-			
+			{showModal &&
+				createPortal(
+					<Modal
+						articleBody={articleBody}
+						onClose={() => setShowModal(false)}
+					/>,
+					document.body,
+				)}
 		</>
 	);
 };
