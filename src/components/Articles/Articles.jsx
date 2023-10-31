@@ -23,10 +23,9 @@ const Articles = () => {
 		return <Loader />;
 	}
 
-	const openModal = (event) => {
-		console.log(event);
+	const openModal = (article) => {
 		setShowModal(true);
-		setArticleBody(event.target.textContent);
+		setArticleBody(article.body);
 	}
 
 	return (
@@ -34,7 +33,7 @@ const Articles = () => {
 			<h3>Articoli</h3>
 			<ul className='articles-list'>
 				{articles.map((article, index) => (
-					<li onClick={openModal} key={index} className='articles-list__item'>
+					<li onClick={() => openModal(article)} key={index} className='articles-list__item'>
 						<span className='articles-list__item-number'>
 							{article.id}
 						</span>
