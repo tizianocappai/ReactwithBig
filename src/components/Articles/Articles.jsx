@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader';
 import './Articles.css';
+import Modal from '../Modal/Modal';
+import { createPortal } from 'react-dom';
 
 const Articles = () => {
 	const [articles, setArticles] = useState(null);
+	const [showModal, setShowModal] = useState(false);
+	const [articleBody, setArticleBody] = useState(null);
 
 	useEffect(() => {
 		fetch('https://dummyjson.com/posts')
@@ -19,12 +23,18 @@ const Articles = () => {
 		return <Loader />;
 	}
 
+	const openModal = (event) => {
+		console.log(event);
+		setShowModal(true);
+		setArticleBody(event.target.textContent);
+	}
+
 	return (
 		<>
 			<h3>Articoli</h3>
 			<ul className='articles-list'>
 				{articles.map((article, index) => (
-					<li key={index} className='articles-list__item'>
+					<li onClick={openModal} key={index} className='articles-list__item'>
 						<span className='articles-list__item-number'>
 							{article.id}
 						</span>
@@ -34,6 +44,16 @@ const Articles = () => {
 					</li>
 				))}
 			</ul>
+
+			{showModal && createPortal(
+				<Modal articleBody={articleBody} onClose={() => setShowModal(false)} />,
+				/*document.getRootNode('/.app-container')*/
+				document.body)
+			}
+
+			{/* CREARE COMPONENTE X FARE UNA MODALE CHE SI APRE AL CLICK SUL SINGOLO ARTICOLO E VIENE AGGANCIATA AD UN NODO DIVERSO RISPETO A QUELLO DOVE SI TROVA(BODY IDROOT)*/}
+			
+			
 		</>
 	);
 };
