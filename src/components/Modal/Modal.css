@@ -1,21 +1,22 @@
 .modal-container {
-    background-color: aliceblue;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    align-items: center;
+    /* filter: blur(5px) TODO: aggiungere a app-container attraverso context*/ 
 }
 
-.modal-pos {
-    position: fixed;
-    height: 300px;
-    width: 600px;
-    left: calc(50% - 300px);
-    top: 100px;
+.modal-content {
     border: 2px solid black;
     border-radius: 12px;
-    overflow: hidden;
+    background-color: aliceblue;
+    width: 450px;
+    height: 250px;
+    overflow: auto;
 }
 
 .modal-top-section {
@@ -24,14 +25,21 @@
 	height: 30px;
 	border-bottom: 1px solid black;
     background-color: lightblue;
+    position: fixed;
+    width: inherit;
+    /* TODO: con position fixed rimangono gli spigoli in alto */ 
 }
 
-.modal-close-icon {
+.modal__close-icon {
 	width: 20px;
 	cursor: pointer;
     margin-right: 10px;
 }
 
-.modal-description {
-    margin-bottom: 30px;
+.modal-body-section {
+    /* display: flex; TODO: perchè non funziona ?
+    align-items: center;
+    justify-content: center; */
+    padding: 35px; 
+    margin-top: 30px;
 }

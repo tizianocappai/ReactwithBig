@@ -7,17 +7,19 @@ const Modal = (props) => {
 
     return (
         <>
-        <div className='modal-pos'>
-            <div className='modal-top-section'>
-                <img
-                    onClick={onClose}
-                    className='modal-close-icon'
-                    src={close}
-                    alt=''
-                />
-            </div>
-            <div className='modal-container'>
-                <span className='modal-description'>{articleBody}</span>
+        <div className='modal-container'>
+            <div className='modal-content'>
+                <div className='modal-top-section'>
+                    <img
+                        onClick={onClose}
+                        className='modal__close-icon'
+                        src={close}
+                        alt=''
+                    />
+                </div>
+                <div className='modal-body-section'>
+                    <span className='modal-description'>{articleBody}</span>
+                </div>
             </div>
         </div>
         </>
