@@ -1,6 +1,18 @@
+.body-container {
+}
+
 .app-container {
 	width: 80%;
 	margin: 0 auto;
 	background-color: white;
 	min-height: 100vh;
+}
+
+.dark {
+	background-color: #262626;
+    color: rgb(195, 229, 254);
+}
+
+.blur {
+	filter: blur(5px);
 }

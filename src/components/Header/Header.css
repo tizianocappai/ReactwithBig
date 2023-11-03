@@ -19,3 +19,7 @@
 	width: 20px;
 	cursor: pointer;
 }
+
+.dark {
+	border-bottom: 1px solid rgb(195, 229, 254);
+}

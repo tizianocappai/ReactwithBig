@@ -27,7 +27,7 @@
     background-color: lightblue;
     position: fixed;
     width: inherit;
-    /* TODO: con position fixed rimangono gli spigoli in alto */ 
+    /* TODO: aggiunto position fixed, perchè rimangono gli spigoli in alto */ 
 }
 
 .modal__close-icon {
@@ -37,9 +37,15 @@
 }
 
 .modal-body-section {
-    /* display: flex; TODO: perchè non funziona ?
+    /* display: flex; TODO: perchè non funziona ? Ho messo il padding pe centrare il testo
     align-items: center;
     justify-content: center; */
     padding: 35px; 
     margin-top: 30px;
+}
+
+.dark-modal { /* TODO: ho aggiunto -modal alla classe perche senno diventava tutto con i border dappertutto boh */ 
+	background-color: #262626;
+    color: rgb(195, 229, 254);
+    border: 1px solid rgb(195, 229, 254);
 }

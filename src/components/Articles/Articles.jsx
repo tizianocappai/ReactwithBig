@@ -3,11 +3,14 @@ import Loader from '../Loader/Loader';
 import './Articles.css';
 import Modal from '../Modal/Modal';
 import { createPortal } from 'react-dom';
+import Context from '../Context/context';
+import { useContext} from 'react';
 
 const Articles = () => {
 	const [articles, setArticles] = useState(null);
 	const [showModal, setShowModal] = useState(false);
 	const [articleBody, setArticleBody] = useState(null);
+	const {filter, setFilter} = useContext(Context);
 
 	useEffect(() => {
 		fetch('https://dummyjson.com/posts')
@@ -25,6 +28,7 @@ const Articles = () => {
 
 	const openModal = (article) => {
 		setShowModal(true);
+		setFilter('blur');
 		setArticleBody(article.body);
 	}
 
@@ -48,7 +52,10 @@ const Articles = () => {
 				createPortal(
 					<Modal
 						articleBody={articleBody}
-						onClose={() => setShowModal(false)}
+						onClose={() => {
+							setShowModal(false);
+							setFilter('');
+						}}
 					/>,
 					document.body,
 				)}

@@ -42,3 +42,9 @@
 	pointer-events: none;
 	background-color: rgba(0, 0, 0, 0.23);
 }
+
+.dark {
+	background-color: #262626;
+    color: rgb(195, 229, 254);
+	border-bottom: 1px solid rgb(195, 229, 254);
+}

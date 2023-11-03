@@ -4,10 +4,20 @@ import Clock from './components/Clock/Clock';
 import Articles from './components/Articles/Articles';
 import Header from './components/Header/Header';
 import Menu from './components/Menu/Menu';
+import Context from './components/Context/context';
 
 function App() {
 	const [menuState, setMenuState] = useState(false);
-	const [componentToShow, setComponentToShow] = useState('Clock');
+	const [componentToShow, setComponentToShow] = useState('Clock'); 	
+	const [theme, setTheme] = useState('light');
+	const [filter, setFilter] = useState('');
+
+	const value = {
+		theme,
+		setTheme,
+		filter, 
+		setFilter
+	}
 
 	function handleMenuState(value) {
 		setMenuState(value);
@@ -25,15 +35,19 @@ function App() {
 	}
 
 	return (
-		<div className='app-container'> 
-			<Header handleClick={handleMenuState} />
-			<Menu
-				isOpen={menuState}
-				handleClose={handleMenuState}
-				handleComponentToShow={(value) => setComponentToShow(value)}
-			/>
-			{renderComponent()}
-		</div>
+		<Context.Provider value={value}>
+			<div className={`body-container ${theme} ${filter}`}>
+				<div className={`app-container ${theme}`}> 
+					<Header handleClick={handleMenuState} />
+					<Menu 
+						isOpen={menuState}
+						handleClose={handleMenuState}
+						handleComponentToShow={(value) => setComponentToShow(value)}
+					/>
+					{renderComponent()}
+				</div>
+			</div>
+		</Context.Provider>
 	);
 }
 
