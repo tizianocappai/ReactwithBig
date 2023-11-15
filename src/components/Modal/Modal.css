@@ -1,4 +1,4 @@
-.modal-container {
+.modal__container {
     position: fixed;
     left: 0;
     top: 0;
@@ -7,10 +7,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* filter: blur(5px) TODO: aggiungere a app-container attraverso context*/ 
 }
 
-.modal-content {
+.modal__content {
     border: 2px solid black;
     border-radius: 12px;
     background-color: aliceblue;
@@ -19,7 +18,7 @@
     overflow: auto;
 }
 
-.modal-top-section {
+.modal__top-section {
 	display: flex;
 	justify-content: flex-end;
 	height: 30px;
@@ -27,7 +26,8 @@
     background-color: lightblue;
     position: fixed;
     width: inherit;
-    /* TODO: aggiunto position fixed, perchè rimangono gli spigoli in alto */ 
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 .modal__close-icon {
@@ -36,16 +36,18 @@
     margin-right: 10px;
 }
 
-.modal-body-section {
-    /* display: flex; TODO: perchè non funziona ? Ho messo il padding pe centrare il testo
-    align-items: center;
-    justify-content: center; */
+.modal__body-section {
     padding: 35px; 
     margin-top: 30px;
+    max-height: 100%;
 }
 
-.dark-modal { /* TODO: ho aggiunto -modal alla classe perche senno diventava tutto con i border dappertutto boh */ 
+.modal--dark { 
 	background-color: #262626;
     color: rgb(195, 229, 254);
     border: 1px solid rgb(195, 229, 254);
+}
+
+.modal__description {
+
 }

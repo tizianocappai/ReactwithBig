@@ -1,4 +1,4 @@
-.header {
+.header--light {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
@@ -20,6 +20,15 @@
 	cursor: pointer;
 }
 
-.dark {
+.header--dark {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	flex-direction: row;
+	height: 80px;
+	align-items: center;
+	padding: 0 8px;
+	border-bottom: 1px solid black;
+	margin-bottom: 30px;
 	border-bottom: 1px solid rgb(195, 229, 254);
 }

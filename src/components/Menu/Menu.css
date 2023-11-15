@@ -1,4 +1,4 @@
-.menu {
+.menu--light {
 	position: fixed;
 	right: 0;
 	top: 0;
@@ -9,13 +9,23 @@
 	padding: 0 8px;
 }
 
-.menu__top-section {
+.menu__top-section--light {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	height: 80px;
 	border-bottom: 1px solid black;
 	align-items: center;
+}
+
+.menu__top-section--dark {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 80px;
+	border-bottom: 1px solid black;
+	align-items: center;
+	border-bottom: 1px solid rgb(195, 229, 254);
 }
 
 .menu__close-icon {
@@ -43,7 +53,15 @@
 	background-color: rgba(0, 0, 0, 0.23);
 }
 
-.dark {
+.menu--dark {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	background-color: white;
+	width: 60vw;
+	z-index: 2;
+	padding: 0 8px;
 	background-color: #262626;
     color: rgb(195, 229, 254);
 	border-bottom: 1px solid rgb(195, 229, 254);

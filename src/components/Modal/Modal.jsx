@@ -10,9 +10,9 @@ const Modal = (props) => {
 
     return (
         <>
-        <div className='modal-container'>
-            <div className={`modal-content ${theme}-modal `}>
-                <div className='modal-top-section'>
+        <div className='modal__container'>
+            <div className={`modal__content modal--${theme}`}>
+                <div className='modal__top-section'>
                     <img
                         onClick={onClose}
                         className='modal__close-icon'
@@ -20,8 +20,8 @@ const Modal = (props) => {
                         alt=''
                     />
                 </div>
-                <div className='modal-body-section'>
-                    <span className='modal-description'>{articleBody}</span>
+                <div className='modal__body-section'>
+                    <span className='modal__description'>{articleBody}</span>
                 </div>
             </div>
         </div>

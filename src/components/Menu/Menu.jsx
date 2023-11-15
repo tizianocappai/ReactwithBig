@@ -31,8 +31,8 @@ const Menu = (props) => {
 		isOpen && (
 			<>
 				<div className='menu-overlay' ></div>
-				<section className={`menu ${theme} `}>
-					<div className= {`menu__top-section ${theme} `}>
+				<section className={`menu--${theme} `}>
+					<div className= {`menu__top-section--${theme} `}>
 						<span>
 							<input type='button' value="DARK THEME" onClick={changeTheme}></input>
 						</span>
